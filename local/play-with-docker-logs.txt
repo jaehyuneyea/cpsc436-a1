@@ -1,0 +1,60 @@
+###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node1] (local) root@192.168.0.28 ~
+$ docker pull jaehyune/imageclassification
+Using default tag: latest
+latest: Pulling from jaehyune/imageclassification
+8b91b88d5577: Pull complete 
+824416e23423: Pull complete 
+8f777578c172: Pull complete 
+cbfea27109a8: Pull complete 
+276dfcf5deff: Pull complete 
+b8d1a05a6269: Pull complete 
+290b11e5bea2: Pull complete 
+a5a4fe787d86: Pull complete 
+00da8911d595: Pull complete 
+Digest: sha256:7d3fceb16f52c86acb4aa882a180f6e07c3b8d189503e2bee7bb080ce6d70725
+Status: Downloaded newer image for jaehyune/imageclassification:latest
+docker.io/jaehyune/imageclassification:latest
+[node1] (local) root@192.168.0.28 ~
+$ docker run jaehyune/imageclassification
+2024-10-04 22:45:35.193080: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-10-04 22:45:35.262010: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-10-04 22:45:35.262727: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-04 22:45:36.960812: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading data from https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+170498071/170498071 [==============================] - 2s 0us/step
+2024-10-04 22:45:56.262111: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 614400000 exceeds 10% of free system memory.
+Epoch 1/10
+1563/1563 [==============================] - ETA: 0s - loss: 1.5116 - accuracy: 0.44802024-10-04 22:46:51.241960: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 122880000 exceeds 10% of free system memory.
+1563/1563 [==============================] - 52s 33ms/step - loss: 1.5116 - accuracy: 0.4480 - val_loss: 1.2625 - val_accuracy: 0.5434
+Epoch 2/10
+1563/1563 [==============================] - 50s 32ms/step - loss: 1.1603 - accuracy: 0.5891 - val_loss: 1.0601 - val_accuracy: 0.6305
+Epoch 3/10
+1563/1563 [==============================] - 47s 30ms/step - loss: 1.0048 - accuracy: 0.6465 - val_loss: 0.9675 - val_accuracy: 0.6625
+Epoch 4/10
+1563/1563 [==============================] - 48s 31ms/step - loss: 0.9078 - accuracy: 0.6833 - val_loss: 0.9557 - val_accuracy: 0.6693
+Epoch 5/10
+1563/1563 [==============================] - 47s 30ms/step - loss: 0.8329 - accuracy: 0.7065 - val_loss: 0.9163 - val_accuracy: 0.6848
+Epoch 6/10
+1563/1563 [==============================] - 47s 30ms/step - loss: 0.7779 - accuracy: 0.7285 - val_loss: 0.8591 - val_accuracy: 0.7062
+Epoch 7/10
+1563/1563 [==============================] - 46s 29ms/step - loss: 0.7293 - accuracy: 0.7448 - val_loss: 0.9004 - val_accuracy: 0.6961
+Epoch 8/10
+1563/1563 [==============================] - 51s 33ms/step - loss: 0.6862 - accuracy: 0.7579 - val_loss: 0.8859 - val_accuracy: 0.7058
+Epoch 9/10
+1563/1563 [==============================] - 50s 32ms/step - loss: 0.6484 - accuracy: 0.7719 - val_loss: 0.9047 - val_accuracy: 0.6923
+Epoch 10/10
+1563/1563 [==============================] - 44s 28ms/step - loss: 0.6141 - accuracy: 0.7847 - val_loss: 0.8289 - val_accuracy: 0.7211
+2024-10-04 22:54:06.793811: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 122880000 exceeds 10% of free system memory.
+313/313 - 3s - loss: 0.8289 - accuracy: 0.7211 - 3s/epoch - 9ms/step
+Test accuracy: 0.7210999727249146
+[node1] (local) root@192.168.0.28 ~
+$ 
